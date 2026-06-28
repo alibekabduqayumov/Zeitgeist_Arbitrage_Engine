@@ -16,5 +16,9 @@ PYTHONPATH=$PROJECT_DIR $VENV $PROJECT_DIR/core/scrapers/hackernews_scraper.py >
 echo "→ Running velocity scorer..." >> $LOG
 PYTHONPATH=$PROJECT_DIR $VENV $PROJECT_DIR/nlp/velocity.py >> $LOG 2>&1
 
+# Step 3: arbitrage scoring
+echo "→ Running arbitrage scorer..." >> $LOG
+PYTHONPATH=$PROJECT_DIR $VENV $PROJECT_DIR/nlp/arbitrage_scorer.py >> $LOG 2>&1
+
 echo "Pipeline done: $(date)" >> $LOG
 echo "" >> $LOG
